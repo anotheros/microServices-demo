@@ -1,0 +1,18 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: monitor-service
+security.basic.enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:1111/eureka/
+  instance:
+    preferIpAddress: true
+turbine:
+  aggregator:
+    clusterConfig: default   
+  appConfig: feign-consumer
+  clusterNameExpression: new String("default")
+
