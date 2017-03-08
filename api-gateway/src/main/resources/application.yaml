@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 8080
+
+# routes to serviceId
+zuul:
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+  routes:
+    api:
+      path: /1/**
+      serviceId: api-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
