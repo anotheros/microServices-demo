@@ -7,7 +7,9 @@ eureka:
   instance:
     # hostname: eureka1
     hostname: pi0
-    # hostname: eureka1         
+    # hostname: eureka1
+  server:
+    enableSelfPreservation: true         
   client:
     registerWithEureka: true
     fetchRegistry: true

@@ -8,6 +8,8 @@ eureka:
     # hostname: eureka1
     hostname: pi2
     # hostname: eureka1         
+  server:
+    enableSelfPreservation: true         
   client:
     registerWithEureka: true
     fetchRegistry: true
