@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761                  
+eureka:
+  instance:
+    # hostname: eureka1
+    hostname: pi1
+    # hostname: eureka1         
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://pi0:8761/eureka/,http://pi1:8761/eureka/,http://pi2:8761/eureka/
